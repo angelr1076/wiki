@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} {{ title }} {% endblock %} {% block body %}
+
+<div class="card col-8 mt-5">
+    <div class="card-body">
+        <span>{{ content|safe }}</span>
+    </div>
+
+</div>
+<div class="col mt-3">
+    <button id="edit" class="btn btn-info"><a style="color:white" href="{% url 'encyclopedia:edit' title %}">Edit {{ title }}</a></button>
+</div>
+{% endblock %}

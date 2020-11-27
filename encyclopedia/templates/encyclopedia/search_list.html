@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}{ % block title % } Search Results { % endblock %} {% block body %}
+
+<ul class="list-group mt-3">
+    {% for entry in entries %}
+    <li class="list-group-item col-6"><a href={{entry}}>{{ entry|safe }}</a></li>
+    {% endfor %}
+</ul>
+
+<div class="container">
+    <div class="row">
+        <img src="https://res.cloudinary.com/angelrodriguez/image/upload/v1606397224/success.svg" title="success" alt="Girl Shopping">
+    </div>
+</div>
+
+{% endblock %}
